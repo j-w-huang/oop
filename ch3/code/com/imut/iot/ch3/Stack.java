@@ -20,8 +20,7 @@ public class Stack {
 			return;
 		}
 		
-		p++;
-		intArr[p] = i;
+		intArr[++p] = i;
 		
 		System.out.println(i);
 	}
