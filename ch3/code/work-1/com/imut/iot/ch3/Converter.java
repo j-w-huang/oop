@@ -42,7 +42,7 @@ public class Converter {
 	}
 	
 	public byte[] toBytes(double d) {
-		long l2f = Double.doubleToLongBits(d);
+		long l2f = Double.doubleToRawLongBits(d);
 		return this.toBytes(l2f);
 	}
 
