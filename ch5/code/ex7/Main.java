@@ -24,23 +24,30 @@ public class Main {
     		}
     		
     		if(b>20 || b<10) {
-    			throw new NumberRangeException("arg: a is not in 10~20");
+    			throw new NumberRangeException("arg: b is not in 10~20");
     		}
     		
     		return a+b;
+    }
+    
+    public static int callTest(int a, int b)  
+    		throws NumberRangeException {
+    	
+    	    //通过异常传播过来的
+    		return testNumberRangeExpception( a, b);
     }
     
 	public static void main(String[] args) {
 		
 		try {
 			//divByZero();
-			testNumberRangeExpception(9,12);
+			//testNumberRangeExpception(9,12);
+			callTest(9,12);
 		} catch (NumberRangeException e) {
 			//终止执行，线程的话，线程会挂掉
 			e.printStackTrace();
 		} catch (ArithmeticException e) {
-			//终止执行，线程的话，线程会挂掉
-			e.printStackTrace();
+		e.printStackTrace();
 		}
 	}
 }
